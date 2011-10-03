@@ -1,0 +1,14 @@
+*.m4
+*.aux
+*.log
+*.bak
+*.bbl
+*.blg
+*.gz
+*.swp
+*.pdf
+*.dvi
+names.txt
+authors.txt
+coder.txt
+editor.txt

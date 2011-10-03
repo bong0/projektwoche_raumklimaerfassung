@@ -1,0 +1,42 @@
+\begin{struktogramm}(127,216)[Raumklimaerfassung] % 432
+  \assign{\(avg=0\)}
+  \assign{\(oldavg=0\)}
+  \assign{\(IOPortAccess\ port\)}
+  \assign{\(clock_t\ start,\ end\)}
+  \assign{\(temp=0\)}
+  \assign{\(a=0.018771\)}
+  \assign{\(b=6.96983\)}
+  \assign{\(c=822.037\)}
+  \assign{\(SET\ dataport\ 0x378\)}
+  \assign{\(SET\ statusport\ dataport+1\)}
+  \assign{\(SET\ controlport\ statusport+1\)}
+  \assign{\(schreibe\ 0xFF\ auf\ dataport\ \)}
+  \assign{\(schreibe\ 0x80\ auf\ statusport\)}
+  \assign{\(schreibe\ 0xD0\ auf\ controlport\)}
+  \assign{\(UPDATE\ regstates\)}
+  \while{\(while(Eingabe\ !=\ q)\)}
+    \assign{\(i=Messung\)}
+    \assign{\(oldavg=avg\)}
+    \assign{\(avg=0\)}
+    \while{\(while(i<0)\)}
+      \assign{\(WAIT\ 800ms\)}
+      \assign{\(schreibe\ ((dataport)\&0xFE)\ auf\ dataport\)}
+      \while{\(while(!(lese(statusport\&0x40))>>6)\)}
+        \assign{\(UPDATE\ regstates\)}
+        \assign{\(schreibe\ ((lese\ statusport)|0x01)\ auf\ dataport\)}
+        \assign{\(start=clock()\)}
+        \while{\(while((lese(statusport\&0x40))>>6)\)}
+          \assign{\(end=clock()\)}
+        \whileend
+        \assign{\(Ausgabe\ ((end-start)/CLOCKS\_PER\_SEC)\)}
+        \assign{\(i--\)}
+      \whileend
+      \assign{\(Ausgabe\ Mittelwert\)}
+      \assign{\(Berechnung\ temp\)}
+      \assign{\(setze\ Ausgabegenauigkeit=3\ Nachkommastellen\)}
+      \assign{\(Ausgabe\ temp\)}
+      \assign{\(Ausgabe\ alter\ Mittelwert\)}
+    \whileend
+  \whileend
+  \assign{\(schlie$\ss$e\ Treiber\ f"ur\ Schnittstelle\)}
+\end{struktogramm}

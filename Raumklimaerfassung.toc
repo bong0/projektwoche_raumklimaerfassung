@@ -1,0 +1,15 @@
+\select@language {ngerman}
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Schaltung}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Bauteile}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Verhalten}{2}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Ausgangszustand}{2}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Triggered}{2}{subsubsection.1.2.2}
+\contentsline {section}{\numberline {2}Bemessung des Kondensators $C_1$}{3}{section.2}
+\contentsline {section}{\numberline {3}Problematiken}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Bauteiltoleranzen}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Der Entladestrom ist nicht $\infty $}{3}{subsection.3.2}
+\contentsline {section}{\numberline {4}Temperatur--Zeit-Diagramm}{4}{section.4}
+\contentsline {section}{\numberline {5}Interpolation der Widerstandswerte}{5}{section.5}
+\contentsline {section}{\numberline {6}Programmcode-Listings}{5}{section.6}
+\contentsline {section}{\numberline {7}Struktogramm von Raumklimaerfassung.cpp}{11}{section.7}
