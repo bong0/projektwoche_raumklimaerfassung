@@ -1,6 +1,7 @@
 set terminal latex
 set output 'Raumklimaerfassung-autopp-gnuplottex-fig1.tex'
-set samples 1024
+unset key
+  set samples 1024
 set format "%g"
 set autoscale
 set xlabel "Temperatur an $R_1$ [$^{\\degree}C$]"
